@@ -46,7 +46,32 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
           // new Padding(padding: const EdgeInsets.symmetric(horizontal: 6.0)),
           new Icon(Icons.search),
           new Padding(padding: const EdgeInsets.symmetric(horizontal: 5.0)),
-          new Icon(Icons.more_vert_outlined),
+          PopupMenuButton(
+            itemBuilder: (context) {
+              return [
+                PopupMenuItem<int>(
+                        value: 0,
+                        child: Text("New group"),
+                    ),
+                PopupMenuItem<int>(
+                        value: 0,
+                        child: Text("New broadcast"),
+                    ),
+                PopupMenuItem<int>(
+                        value: 0,
+                        child: Text("Link devices"),
+                    ),
+                PopupMenuItem<int>(
+                        value: 0,
+                        child: Text("Starred messgaes"),
+                    ),
+                PopupMenuItem<int>(
+                        value: 0,
+                        child: Text("Settings"),
+                    ),
+              ];
+            },
+          ),
           new Padding(padding: const EdgeInsets.symmetric(horizontal: 5.0)),
         ],
       ),
